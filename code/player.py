@@ -13,6 +13,10 @@ class Player(pygame.sprite.Sprite):
         self.direction = pygame.math.Vector2(0,0)
         self.gravity = 0.8
         self.jump_speed = -16
+  
+    def import_char_assets(self):
+            character_path = '../graphics/character/'
+            self.animations = {'idle':[],'run':[],'jump':[],'fall':[]}
         
     def get_input(self):
         keys = pygame.key.get_pressed()
